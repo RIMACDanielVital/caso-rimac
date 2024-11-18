@@ -16,14 +16,12 @@ rules:
   no-await-in-loop: 0
   no-restricted-syntax: 0
   no-plusplus: 0
-  arrow-parens: ['error', 'always']
   no-return-await: 'error'
   arrow-body-style: ['error', 'as-needed', { 'requireReturnForObjectLiteral': true }]
   object-curly-spacing: ['error', 'always']
   quotes: [2, 'single', { avoidEscape: true }]
   no-underscore-dangle: 0
   linebreak-style: ['error', 'windows']
-  comma-dangle: ['error', { 'functions': 'never' }]
   no-mixed-spaces-and-tabs: ['error', 'smart-tabs']
   object-shorthand: ['error', 'always', { 'avoidExplicitReturnArrows': true, 'ignoreConstructors': true }]
   max-len: ['error', { 'code': 180 }]

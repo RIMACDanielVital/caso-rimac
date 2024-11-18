@@ -4,4 +4,4 @@ export const copagoRegex = /m[ií]nimo\s*([A-Z]{1,3}\$?\s*[\d,.]+)|m[ií]nimo de
 export const cantidadTalleresRegEx = /Talleres\s*/gi;
 export const tipoTallerRegex = /talleres afiliados\s*([a-zA-Z\s]+?)(?=\s|$)|talleres afiliados*([a-zA-Z\s]+)/gi;
 export const marcaRegex = /\bmarca\b\s*(.*)/gi;
-export const tallerRegex = /talleres*([a-zA-Z\s]+)|otros talleres/gi;
+export const tallerRegex = /talleres*([a-zA-Z\s]+)|otros talleres|TALLERES*([a-zA-Z\s]+)/gi;

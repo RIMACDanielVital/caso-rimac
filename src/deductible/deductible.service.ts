@@ -7,15 +7,16 @@ import {
   deducibleRegex,
   marcaRegex,
   tallerRegex,
-  tipoTallerRegex
+  tipoTallerRegex,
 } from '../commons/utils';
+import { DeduciblePayloadResponse } from './interfaces/deductible-response.dto';
 
 @Injectable()
 export class DeductibleService {
-  create(deductible: CreateDeductibleDto): Array<DeduciblePayload> {
+  create(deductible: CreateDeductibleDto): DeduciblePayloadResponse {
     const text = deductible.text.toLocaleLowerCase();
 
-    const deducibles: any = [];
+    const deducibles: DeduciblePayload[] = [];
     const deducibleMatch = text.match(deducibleRegex);
     const copagoMatch = text.match(copagoRegex);
     const tallerMatch = text.match(tallerRegex);
@@ -68,7 +69,7 @@ export class DeductibleService {
         moneda,
         tipo,
         marca,
-        taller
+        taller,
       };
       deducibles.push(deducibleInfo);
       deducibleMatch.shift();
@@ -77,6 +78,6 @@ export class DeductibleService {
       tallerMatch.shift();
     }
 
-    return deducibles;
+    return { payload: deducibles };
   }
 }
